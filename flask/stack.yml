@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  web:
+    image: gsengun/visium-load-demo-flask:1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    deploy:
+      replicas: 1
+    ports:
+      - target: 5000
+        published: 80

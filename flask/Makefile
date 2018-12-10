@@ -10,3 +10,8 @@ rm:
 ps:
 	docker stack ps blog
 
+push:
+	docker-compose -f stack.yml push
+
+pull:
+	docker-compose -f stack.yml pull

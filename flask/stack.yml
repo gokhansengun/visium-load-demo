@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   web:
-    image: gsengun/visium-load-demo-flask:1
+    image: gsengun/visium-load-demo-flask:2
     build:
       context: ./
       dockerfile: Dockerfile

@@ -10,4 +10,4 @@ ENV FLASK_APP=/app/flaskr/flaskr.py
 
 RUN flask initdb
 
-ENTRYPOINT [ "flask", "run", "--without-threads", "--host", "0.0.0.0" ]
+ENTRYPOINT [ "flask", "run", "--host", "0.0.0.0" ]

@@ -1,5 +1,5 @@
 build:
-	docker-compose build -f stack.yml
+	docker-compose -f stack.yml build
 
 deploy:
 	docker stack deploy -c stack.yml blog

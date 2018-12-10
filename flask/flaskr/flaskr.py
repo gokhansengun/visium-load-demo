@@ -81,7 +81,7 @@ def show_entries():
 @app.route('/slow')
 def slow():
     """Artificially slow endpoint"""
-    delay = random.randint(300, 500) / 1000.0
+    delay = random.randint(1, 3)
     time.sleep(delay)
 
     return render_template('slow.html')

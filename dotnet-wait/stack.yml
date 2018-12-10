@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  web:
+    image: gsengun/visium-load-demo-dotnet-wait:1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    deploy:
+      replicas: 1
+    ports:
+      - target: 80
+        published: 80

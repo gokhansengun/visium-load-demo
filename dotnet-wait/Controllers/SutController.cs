@@ -11,9 +11,9 @@ namespace sut_test.Controllers
     public class SutController : ControllerBase
     {
         [HttpGet]
-        public async Task<IEnumerable<string>> WaitXMsReturnYStrings(int X, int Y)
+        public IEnumerable<string> WaitXMsReturnYStrings(int X, int Y)
         {
-            await Task.Delay(X);
+            Task.Delay(X).Wait();
 
             var listOfStrings = new List<string>(Y);
 
@@ -26,9 +26,9 @@ namespace sut_test.Controllers
         }
 
         [HttpGet]
-        public async Task<ObjectResult> WaitXMsGiveAnError(int X, int E, string M = "An error occured")
+        public ObjectResult WaitXMsGiveAnError(int X, int E, string M = "An error occured")
         {
-            await Task.Delay(X);
+            Task.Delay(X).Wait();
 
             return StatusCode(E, M);
         }

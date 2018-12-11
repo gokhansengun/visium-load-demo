@@ -2,7 +2,7 @@ deploy:
 	docker stack deploy -c stack.yml static
 
 rm:
-	docker stack rm static
+	docker-compose -f stack.yml down -v
 
 ps:
-	docker stack ps static
+	docker-compose -f stack.yml ps

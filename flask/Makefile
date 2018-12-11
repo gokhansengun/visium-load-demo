@@ -2,13 +2,13 @@ build:
 	docker-compose -f stack.yml build
 
 deploy:
-	docker stack deploy -c stack.yml blog
+	docker-compose -f stack.yml up -d
 
 rm:
-	docker stack rm blog
+	docker-compose -f stack.yml down -v
 
 ps:
-	docker stack ps blog
+	docker-compose -f stack.yml ps
 
 push:
 	docker-compose -f stack.yml push

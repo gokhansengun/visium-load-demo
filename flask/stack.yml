@@ -11,3 +11,4 @@ services:
     ports:
       - target: 5000
         published: 80
+

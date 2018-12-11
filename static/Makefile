@@ -1,5 +1,5 @@
 deploy:
-	docker stack deploy -c stack.yml static
+	docker-compose -f stack.yml up -d
 
 rm:
 	docker-compose -f stack.yml down -v

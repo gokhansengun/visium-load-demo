@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   web:
-    image: gsengun/visium-load-demo-dotnet-wait:1
+    image: gsengun/visium-load-demo-dotnet-wait:2
     build:
       context: ./
       dockerfile: Dockerfile
